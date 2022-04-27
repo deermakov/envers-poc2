@@ -1,10 +1,10 @@
 databaseChangeLog:
 - changeSet:
-    id: 03-create_party
+    id: 02b-create_party_aud
     author: deermakov
     changes:
     - createTable:
-        tableName: PARTY
+        tableName: PARTY_AUD
         columns:
         - column:
             name: ID
@@ -12,6 +12,16 @@ databaseChangeLog:
         - column:
             name: DTYPE
             type: VARCHAR(100)
+            constraints:
+              nullable: false
+        - column:
+            name: REV
+            type: NUMBER
+            constraints:
+              nullable: false
+        - column:
+            name: REVTYPE
+            type: NUMBER
             constraints:
               nullable: false
         - column:
@@ -41,17 +51,17 @@ databaseChangeLog:
             name: INDIVIDUAL_ID
             type: UUID
             constraints:
-              nullable: true
+              nullable: false
         - column:
             name: FIO
             type: VARCHAR(100)
             constraints:
               nullable: true
     - addPrimaryKey:
-        columnNames: ID
-        constraintName: PK_PARTY
-        tableName: PARTY
+        columnNames: REV
+        constraintName: PK_PARTY_AUD
+        tableName: PARTY_AUD
         validate: true
     rollback:
     - dropTable:
-        tableName: PARTY
+        tableName: PARTY_AUD
