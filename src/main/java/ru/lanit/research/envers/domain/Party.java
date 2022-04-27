@@ -10,7 +10,7 @@ import org.hibernate.envers.RelationTargetAuditMode;
 import javax.persistence.*;
 
 @Entity
-@Inheritance(strategy = InheritanceType.JOINED)
+@Inheritance(strategy = InheritanceType.SINGLE_TABLE)
 @Table(name = "PARTY")
 @Audited(targetAuditMode = RelationTargetAuditMode.NOT_AUDITED)
 @Data

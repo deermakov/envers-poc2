@@ -6,11 +6,11 @@ import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 import org.hibernate.envers.Audited;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "LEGAL_ENTITY")
+@DiscriminatorValue("LEGAL_ENTITY")
 @Audited
 @Data
 @ToString(callSuper = true)

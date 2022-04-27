@@ -7,13 +7,13 @@ import lombok.experimental.SuperBuilder;
 import org.hibernate.envers.Audited;
 import org.hibernate.envers.RelationTargetAuditMode;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.OneToOne;
-import javax.persistence.Table;
 
 @Entity
-@Table(name = "INDIVIDUAL_ENTREPRENEUR")
+@DiscriminatorValue("INDIVIDUAL_ENTREPRENEUR")
 @Audited
 @Data
 @ToString(callSuper = true)

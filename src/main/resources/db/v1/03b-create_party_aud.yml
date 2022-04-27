@@ -10,15 +10,20 @@ databaseChangeLog:
             name: ID
             type: UUID
         - column:
-              name: REV
-              type: NUMBER
-              constraints:
-                  nullable: false
+            name: DTYPE
+            type: VARCHAR(100)
+            constraints:
+              nullable: false
         - column:
-              name: REVTYPE
-              type: NUMBER
-              constraints:
-                  nullable: false
+            name: REV
+            type: NUMBER
+            constraints:
+              nullable: false
+        - column:
+            name: REVTYPE
+            type: NUMBER
+            constraints:
+              nullable: false
         - column:
             name: ACTUAL_TO
             type: DATE
@@ -30,6 +35,26 @@ databaseChangeLog:
         - column:
             name: DEAL_ID
             type: UUID
+            constraints:
+              nullable: true
+        - column:
+            name: NAME
+            type: VARCHAR(100)
+            constraints:
+              nullable: true
+        - column:
+            name: SELF_EMPLOYED
+            type: BOOLEAN
+            constraints:
+              nullable: true
+        - column:
+            name: INDIVIDUAL_ID
+            type: UUID
+            constraints:
+              nullable: false
+        - column:
+            name: FIO
+            type: VARCHAR(100)
             constraints:
               nullable: true
     - addPrimaryKey:

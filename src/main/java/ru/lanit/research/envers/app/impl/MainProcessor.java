@@ -94,5 +94,4 @@ public class MainProcessor {
     public Deal getDeal(UUID dealId) {
         return dealJpaRepository.findById(dealId).orElseThrow();
     }
-
 }

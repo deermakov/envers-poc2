@@ -11,9 +11,9 @@
     </parent>
 
     <groupId>ru.lanit.research.graphql</groupId>
-    <artifactId>envers-poc</artifactId>
+    <artifactId>envers-poc2</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>envers-poc</name>
+    <name>envers-poc2</name>
     <description>PoC project for Hibernate Envers</description>
 
     <properties>

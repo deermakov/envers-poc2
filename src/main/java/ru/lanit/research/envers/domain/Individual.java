@@ -5,14 +5,14 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 import lombok.experimental.SuperBuilder;
 
+import javax.persistence.DiscriminatorValue;
 import javax.persistence.Entity;
-import javax.persistence.Table;
 
 /**
  * Полученная сущность
  */
 @Entity
-@Table(name = "INDIVIDUAL")
+@DiscriminatorValue("INDIVIDUAL")
 @Data
 @ToString(callSuper = true)
 @SuperBuilder
